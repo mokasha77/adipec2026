@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>UAEU at ADIPEC 2026</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: phone-first single column; a red masthead band, then two project blocks, each with a numbers strip and its poster. */
+:root{
+  --red:#C8102E; --red-ink:#A60D26;
+  --bg:#FAF9F8; --surface:#FFFFFF; --ink:#1E1D1C; --muted:#5E5A57; --line:#E4E0DC; --chip:#F1EEEB;
+  --on-red:#FFFFFF;
+  --display:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --red:#E0384F; --red-ink:#FF8A99; --bg:#151413; --surface:#1E1C1B; --ink:#EEEAE6; --muted:#ABA49E; --line:#34302D; --chip:#262321; --on-red:#FFFFFF; color-scheme:dark}}
+:root[data-theme="dark"]{--red:#E0384F; --red-ink:#FF8A99; --bg:#151413; --surface:#1E1C1B; --ink:#EEEAE6; --muted:#ABA49E; --line:#34302D; --chip:#262321; --on-red:#FFFFFF; color-scheme:dark}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55}
+.logo{background:#FFFFFF}
+.logo .wrap{padding-block:14px}
+.logo img{display:block;width:min(340px,80%);height:auto}
+.mast span{white-space:nowrap}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .mast{background:#A30D24}}
+:root[data-theme="dark"] .mast{background:#A30D24}
+.wrap{max-width:960px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mast{background:var(--red);color:var(--on-red)}
+.mast .wrap{padding-block:18px;display:flex;gap:12px;align-items:baseline;justify-content:space-between;flex-wrap:wrap}
+.mast b{font-family:var(--display);font-weight:800;letter-spacing:.02em;font-size:15px}
+.mast span{font-family:var(--display);font-weight:500;font-size:13px;letter-spacing:.06em;text-transform:uppercase;opacity:.92}
+header.hero .wrap{padding-block:28px 8px}
+.kicker{font-family:var(--display);font-weight:700;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--red-ink)}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(34px,7vw,58px);line-height:1.02;margin:.25em 0 .2em;text-wrap:balance}
+h2{font-family:var(--display);font-weight:800;font-size:clamp(26px,4.6vw,36px);line-height:1.1;margin:0 0 .3em;text-wrap:balance}
+.lede{font-size:19px;color:var(--muted);max-width:62ch;margin:0}
+.media{margin:20px 0 6px;border-radius:6px;overflow:hidden;background:#000;aspect-ratio:16/9;max-width:100%}
+.media img,.media video{width:100%;height:100%;object-fit:cover;display:block}
+.cap{font-size:14px;color:var(--muted);margin:6px 0 0}
+section.proj{border-top:1px solid var(--line);margin-top:36px}
+section.proj .wrap{padding-block:30px 10px}
+.who{font-family:var(--display);font-size:14px;color:var(--muted);margin:0 0 14px;line-height:1.5}
+.who strong{color:var(--ink);font-weight:700}
+p.body{max-width:65ch;margin:0 0 14px}
+.nums{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:18px 0}
+.num{background:var(--chip);padding:14px 14px 12px;border-left:4px solid var(--red)}
+.num .v{font-family:var(--display);font-weight:800;font-size:34px;line-height:1;color:var(--red-ink);font-variant-numeric:tabular-nums}
+.num .l{font-size:14px;line-height:1.4;margin-top:8px;color:var(--ink)}
+.tag{display:inline-block;font-family:var(--mono);font-size:12px;padding:3px 8px;border:1px solid var(--line);border-radius:3px;color:var(--muted);margin:2px 6px 2px 0}
+.tag.hot{border-color:var(--red);color:var(--red-ink)}
+.status{margin:6px 0 16px}
+details{margin:14px 0 4px;background:var(--surface);border:1px solid var(--line);border-radius:6px}
+summary{cursor:pointer;padding:12px 14px;font-family:var(--display);font-weight:700;font-size:15px}
+summary:focus-visible,button:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+details img{display:block;width:100%;height:auto;border-top:1px solid var(--line)}
+.ref{font-size:14px;color:var(--muted);max-width:70ch}
+footer{border-top:1px solid var(--line);margin-top:36px}
+footer .wrap{padding-block:26px 40px;display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.contact{font-family:var(--display);font-size:15px}
+.contact .addr{font-family:var(--mono);font-size:15px;user-select:all;word-break:break-all}
+button.copy{font-family:var(--display);font-weight:700;font-size:14px;margin-top:8px;min-height:44px;padding:10px 16px;border:1px solid var(--red);background:transparent;color:var(--red-ink);border-radius:4px;cursor:pointer}
+.small{font-size:13px;color:var(--muted)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+
+<div class="logo"><div class="wrap"><img src="assets/uaeu_logo.png" alt="United Arab Emirates University" width="900" height="158"></div></div>
+<div class="mast"><div class="wrap"><b>UAE University · ADIPEC 2026</b><span>Stand 12915 · Hall 12 · ADNEC · 2 to 5 Nov</span></div></div>
+
+<header class="hero"><div class="wrap">
+  <div class="kicker">Department of Mechanical and Aerospace Engineering</div>
+  <h1>Flying where GPS can't</h1>
+  <p class="lede">Inside tanks and vessels, drones lose satellite navigation. We build the aircraft and a measured simulation of it, and test how far the simulation can be trusted.</p>
+  <div class="media" id="media"><video src="assets/reel.mp4" poster="assets/reel_poster.jpg" muted loop playsinline controls preload="none" aria-label="60 second project video, no sound"></video></div>
+  <p class="cap" id="mediacap">Tap to play: the project in 60 seconds, no sound (9 MB).</p>
+</div></header>
+
+<section class="proj" id="mosam"><div class="wrap">
+  <div class="kicker">Research platform</div>
+  <h2>MOSAM: a sim-to-real tested LiDAR drone twin</h2>
+  <p class="who"><strong>Mohamed Sameh</strong> (MSc student) · Dr. Haitham Elshimy (supervisor) · Dr. Mohamed Okasha (PI) · Dr. Abdullah Hayat (co-PI)</p>
+  <p class="body">A multi-sensor X500 quadrotor logs every LiDAR and inertial stream through ROS 2. Its test room is rebuilt in Gazebo with a calibrated LiDAR and IMU model. The model, metrics and pass rules were frozen before new recordings were made, so the result could not be tuned afterwards.</p>
+  <div class="nums">
+    <div class="num"><div class="v">16 / 17</div><div class="l">frozen stationary sensor checks passed on 5 new recordings; 1 timing metric failed and is reported</div></div>
+    <div class="num"><div class="v">0.10 m</div><div class="l">ceiling-range RMSE in one replayed manual flight</div></div>
+    <div class="num"><div class="v">6.1 cm</div><div class="l">LiDAR-inertial odometry trajectory error in simulation</div></div>
+  </div>
+  <p class="status"><span class="tag hot">Sensor level: holdout tested</span><span class="tag">Localization: simulation and replay</span><span class="tag">Mapping: simulated</span><span class="tag">Navigation: planned</span></p>
+  <img src="assets/mosam_hero.jpg" alt="MOSAM quadrotor with orange UAEU cover over a Livox MID-360 LiDAR" style="display:block;width:100%;height:auto;border-radius:6px;margin:4px 0 12px" loading="lazy">
+  <p class="body">Next: matched real and simulated flights with independent ground truth, then a tank or vessel mock-up trial with an energy-sector partner. Target applications are not yet field-tested.</p>
+  <details><summary>View the MOSAM poster</summary><img src="assets/mosam_poster.jpg" alt="MOSAM ADIPEC 2026 A0 poster" loading="lazy"></details>
+  <p class="ref">Paper: M. Sameh, H. Elshimy, A. Hayat, M. Okasha, "Sensor-Level Sim-to-Real Evaluation of a Calibrated MID-360 LiDAR–IMU Model for Indoor UAVs," submitted to IEEE Aerospace Conference 2027.</p>
+</div></section>
+
+<section class="proj" id="x500"><div class="wrap">
+  <div class="kicker">Graduation project</div>
+  <h2>A flight-calibrated digital twin of the PX4 X500</h2>
+  <p class="who"><strong>Al Reem Alshamsi, Alia Alblooshi, Najla Aljasmi, Alyazia Alharthi, Hamda Alhosani</strong> · supervisor Dr. Mohamed Okasha</p>
+  <p class="body">The team rebuilt an X500 with carbon-fibre arms, measured its mass properties and motor thrust, and wrote a 6-DOF MATLAB/Simulink model that the real PX4 flight software flies, with Gazebo as the display.</p>
+  <div class="nums">
+    <div class="num"><div class="v">1.736 kg</div><div class="l">take-off mass of the team-built X500</div></div>
+    <div class="num"><div class="v">17.5 min</div><div class="l">airborne in five outdoor flights used as comparison data</div></div>
+    <div class="num"><div class="v">0.048 rad/s</div><div class="l">roll-rate RMSE of the twin in flight 20, vs 0.062 if perfect setpoint tracking is assumed</div></div>
+  </div>
+  <p class="status"><span class="tag hot">Hover: compared with flight logs</span><span class="tag">Yaw: torque coefficient pending</span><span class="tag">Manoeuvres: in progress</span></p>
+  <details><summary>View the X500 twin poster</summary><img src="assets/gp_poster.jpg" alt="X500 digital twin ADIPEC 2026 A0 poster" loading="lazy"></details>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="contact">
+    <div class="kicker">Talk to us about test sites and pilots</div>
+    <p style="margin:8px 0 2px">Dr. Mohamed Okasha, Associate Professor</p>
+    <div class="addr"><a id="mail" href="mailto:mokasha@uaeu.ac.ae" style="color:inherit">mokasha@uaeu.ac.ae</a></div>
+    <button class="copy" id="copyBtn" type="button">Copy email address</button>
+  </div>
+  <div class="small">
+    <p style="margin:0 0 6px">United Arab Emirates University, College of Engineering, Al Ain, UAE.</p>
+    <p style="margin:0">Results shown are laboratory and open-field results. No trial in an industrial asset has been made yet.</p>
+  </div>
+</div></footer>
+
+<script>
+document.getElementById('copyBtn').addEventListener('click',function(){
+  var b=this, t=document.getElementById('mail').textContent;
+  function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById('mail'));var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selected: copy it';}
+  try{navigator.clipboard.writeText(t).then(function(){b.textContent='Copied';},sel);}catch(e){sel();}
+});
+</script>
+
+</body>
+</html>
